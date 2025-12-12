@@ -288,11 +288,12 @@
     const chatMessage = document.getElementById('chat-message');
     
     // Выбираем нужный язык для сообщения чата
+    const defaultChatMessage = "Hey! I'm Emily. I'm waiting for your message to show you my video. Hurry, I don't have much time!";
     const finalMessage = translations[langCode]?.chat_msg_name || defaultChatMessage;
 
 
     let messageIndex = 0;
-    const typingSpeed = 70; 
+    const typingSpeed = 70; // Скорость печати в мс
 
     function startTyping() {
         if (messageIndex < finalMessage.length) {
@@ -305,16 +306,22 @@
         }
     }
 
-    // Запускаем чат через 5 секунд после загрузки
-    window.addEventListener('load', () => {
+    // Главная функция запуска чата
+    function showChat() {
+        chatPopup.style.display = 'block'; // Сначала делаем видимым, но прозрачным
         setTimeout(() => {
-            chatPopup.classList.add('show');
+            chatPopup.classList.add('show'); // Затем делаем непрозрачным
             startTyping();
-        }, 5000); 
-    });
+        }, 50); // Небольшая задержка для анимации
+    }
+
+    // Запускаем чат через 5 секунд после загрузки
+    setTimeout(showChat, 5000); 
+
     // === КОНЕЦ СКРИПТА 3 ===
 
 </script>
 
 </body>
 </html>
+
