@@ -17,8 +17,11 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            /* ФОН: БІЛИЙ */
-            background-color: #FFFFFF; 
+            /* ФОН: ВИКОРИСТАННЯ ВАШОГО ЗАВАНТАЖЕНОГО БІЛОГО ЗОБРАЖЕННЯ */
+            background-image: url('bg_white.jpg'); /* <-- ЗАМІНІТЬ НАЗВУ ФАЙЛА, ЯКЩО ПОТРІБНО */
+            background-size: cover;
+            background-attachment: fixed;
+            background-color: #FFFFFF; /* Резервний колір */
             color: #333; 
             padding: 20px;
             margin: 0;
@@ -92,7 +95,7 @@
             height: 100%;
             position: absolute;
             opacity: 0;
-            animation: slide-fade 25s infinite; /* 25s = 5 GIF * 5s */
+            animation: slide-fade 25s infinite; 
             background-size: cover;
             background-position: center;
         }
