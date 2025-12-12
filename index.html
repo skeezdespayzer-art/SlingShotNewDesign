@@ -17,7 +17,7 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            /* ФОН ЗМІНЕНО НА БІЛИЙ */
+            /* ФОН: БІЛИЙ */
             background-color: #FFFFFF; 
             color: #333; 
             padding: 20px;
@@ -53,7 +53,7 @@
             display: inline-block;
             font-size: 1.5em;
             font-weight: bold;
-            margin-top: 20px; /* ЗМЕНШЕНО ВІДСТУП, ЩОБ БУЛА ВИДНА КНОПКА */
+            margin-top: 20px; 
             cursor: pointer;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
@@ -92,7 +92,7 @@
             height: 100%;
             position: absolute;
             opacity: 0;
-            animation: slide-fade 25s infinite; /* 25s = 5 GIF * 5s */
+            animation: slide-fade 25s infinite; 
             background-size: cover;
             background-position: center;
         }
@@ -119,7 +119,7 @@
             margin-top: 20px;
         }
         
-        /* СТИЛИ ФЕЙКОВОГО ЧАТА */
+        /* СТИЛИ ФЕЙКОВОГО ЧАТА (ФИКС: ВИДИМІСТЬ) */
         #chat-popup {
             position: fixed;
             bottom: 20px;
@@ -133,11 +133,13 @@
             text-align: left;
             z-index: 1000;
             opacity: 0;
-            transition: opacity 0.5s;
+            visibility: hidden; /* <--- КЛЮЧОВИЙ ФІКС */
+            transition: opacity 0.5s, visibility 0.5s; /* Додано transition */
             border: 1px solid #AAA;
         }
         #chat-popup.show {
             opacity: 1;
+            visibility: visible; /* <--- КЛЮЧОВИЙ ФІКС */
         }
         #chat-header {
             display: flex;
@@ -184,6 +186,7 @@
         <span style="display: inline-block;">🔒 SSL ENCRYPTED</span>
     </div>
     <p style="font-size: 1.2em; color: #FF0000;">21+ Verified Users Access Only.</p>
+
     <div id="timer-container">02:00</div>
 
     <a href="https://justlovedates.com/tds/ae?tdsId=s8403sid_r&tds_campaign=s8403sid&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=bn&affid=dba65811&subid={subid}&subid2={subid2}&clickid={clickid}" id="main-button" class="blinking-button">
@@ -197,6 +200,7 @@
         <div class="slide"></div>
         <div class="slide"></div>
     </div>
+
     <div class="disclaimer">
         *Access is limited to users 21 years or older. Registration is free.
     </div>
@@ -249,8 +253,8 @@
         // Germany / German
         'de': {
             headline: "🚨 LETZTER ZUGANG! VIDEO & LIVE-CHAT! 🚨",
-            button: "JA! KOSTENЛОСЕР ZUGANG ZU VIDEO & CHAT",
-            safety: "100% KOSTENLOS, KEINE WERBUNG ODER VIREN",
+            button: "JA! KOSTENЛОСЕР ZУGANG ZU VIDEO & CHAT",
+            safety: "100% KOSTENЛОС, KEINE WERBUNG ODER VIREN",
             chat_msg_name: "Hey! Ich bin Emily. Ich warte auf deine Nachricht, um dir mein Video zu zeigen. Beeil dich, ich habe nicht viel Zeit!"
         },
         // France / French
@@ -288,12 +292,11 @@
     const chatMessage = document.getElementById('chat-message');
     
     // Выбираем нужный язык для сообщения чата
-    const defaultChatMessage = "Hey! I'm Emily. I'm waiting for your message to show you my video. Hurry, I don't have much time!";
     const finalMessage = translations[langCode]?.chat_msg_name || defaultChatMessage;
 
 
     let messageIndex = 0;
-    const typingSpeed = 70; // Скорость печати в мс
+    const typingSpeed = 70; 
 
     function startTyping() {
         if (messageIndex < finalMessage.length) {
@@ -306,22 +309,16 @@
         }
     }
 
-    // Главная функция запуска чата
-    function showChat() {
-        chatPopup.style.display = 'block'; // Сначала делаем видимым, но прозрачным
-        setTimeout(() => {
-            chatPopup.classList.add('show'); // Затем делаем непрозрачным
-            startTyping();
-        }, 50); // Небольшая задержка для анимации
-    }
-
     // Запускаем чат через 5 секунд после загрузки
-    setTimeout(showChat, 5000); 
-
+    window.addEventListener('load', () => {
+        setTimeout(() => {
+            chatPopup.classList.add('show');
+            startTyping();
+        }, 5000); 
+    });
     // === КОНЕЦ СКРИПТА 3 ===
 
 </script>
 
 </body>
 </html>
-
