@@ -92,7 +92,7 @@
             height: 100%;
             position: absolute;
             opacity: 0;
-            animation: slide-fade 25s infinite; 
+            animation: slide-fade 25s infinite; /* 25s = 5 GIF * 5s */
             background-size: cover;
             background-position: center;
         }
@@ -134,7 +134,7 @@
             z-index: 1000;
             opacity: 0;
             visibility: hidden; /* <--- КЛЮЧОВИЙ ФІКС */
-            transition: opacity 0.5s, visibility 0.5s; /* Додано transition */
+            transition: opacity 0.5s, visibility 0.5s; 
             border: 1px solid #AAA;
         }
         #chat-popup.show {
@@ -312,7 +312,9 @@
     // Запускаем чат через 5 секунд после загрузки
     window.addEventListener('load', () => {
         setTimeout(() => {
-            chatPopup.classList.add('show');
+            // Гарантированное отображение
+            chatPopup.style.opacity = '1'; 
+            chatPopup.style.visibility = 'visible';
             startTyping();
         }, 5000); 
     });
