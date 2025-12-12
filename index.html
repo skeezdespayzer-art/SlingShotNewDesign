@@ -17,11 +17,11 @@
         body {
             font-family: Arial, sans-serif;
             text-align: center;
-            /* ФОН: ВИКОРИСТАННЯ ВАШОГО ЗАВАНТАЖЕНОГО БІЛОГО ЗОБРАЖЕННЯ */
-            background-image: url('bg_white.jpg'); /* <-- ЗАМІНІТЬ НАЗВУ ФАЙЛА, ЯКЩО ПОТРІБНО */
+            /* ФОН: ИСПОЛЬЗУЕМ ВАШЕ ЗАГРУЖЕННОЕ ИЗОБРАЖЕНИЕ */
+            background-image: url('bg_white.jpg'); 
             background-size: cover;
             background-attachment: fixed;
-            background-color: #FFFFFF; /* Резервний колір */
+            background-color: #FFFFFF; /* Резервный цвет */
             color: #333; 
             padding: 20px;
             margin: 0;
@@ -110,10 +110,8 @@
         /* АНИМАЦИЯ СМЕНЫ ВИДЕО */
         @keyframes slide-fade {
             0% { opacity: 0; }
-            1% { opacity: 1; }  
-            19% { opacity: 1; } 
-            20% { opacity: 0; } 
-            100% { opacity: 0; }
+            1% { opacity: 1; } 19% { opacity: 1; } 
+            20% { opacity: 0; } 100% { opacity: 0; }
         }
         
         .disclaimer {
@@ -122,7 +120,7 @@
             margin-top: 20px;
         }
         
-        /* СТИЛИ ФЕЙКОВОГО ЧАТА (ФИКС: ВИДИМІСТЬ) */
+        /* СТИЛИ ФЕЙКОВОГО ЧАТА (ФИКС: ВИДИМОСТЬ) */
         #chat-popup {
             position: fixed;
             bottom: 20px;
@@ -136,13 +134,13 @@
             text-align: left;
             z-index: 1000;
             opacity: 0;
-            visibility: hidden; /* <--- КЛЮЧОВИЙ ФІКС */
+            visibility: hidden; /* <--- КЛЮЧОВОЙ ФИКС ДЛЯ СТАБИЛЬНОСТИ */
             transition: opacity 0.5s, visibility 0.5s; 
             border: 1px solid #AAA;
         }
         #chat-popup.show {
             opacity: 1;
-            visibility: visible; /* <--- КЛЮЧОВИЙ ФІКС */
+            visibility: visible; /* <--- КЛЮЧОВОЙ ФИКС */
         }
         #chat-header {
             display: flex;
@@ -257,7 +255,7 @@
         'de': {
             headline: "🚨 LETZTER ZUGANG! VIDEO & LIVE-CHAT! 🚨",
             button: "JA! KOSTENЛОСЕР ZУGANG ZU VIDEO & CHAT",
-            safety: "100% KOSTENЛОС, KEINE WERBUNG ODER VIREN",
+            safety: "100% КОСТЕНЛОС, KEINE WERBUNG ODER VIREN",
             chat_msg_name: "Hey! Ich bin Emily. Ich warte auf deine Nachricht, um dir mein Video zu zeigen. Beeil dich, ich habe nicht viel Zeit!"
         },
         // France / French
