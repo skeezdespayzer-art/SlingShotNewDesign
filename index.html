@@ -19,7 +19,7 @@
             text-align: center;
             /* ФОН ЗМІНЕНО НА БІЛИЙ */
             background-color: #FFFFFF; 
-            color: #333; /* Основний текст темний */
+            color: #333; 
             padding: 20px;
             margin: 0;
             overflow-x: hidden;
@@ -36,7 +36,7 @@
 
         /* ЗАГОЛОВОК */
         h1 {
-            color: #FF0000; /* Яскраво-червоний заголовок на білому */
+            color: #FF0000; 
             font-size: 1.8em;
             margin-bottom: 10px;
             min-height: 40px; 
@@ -53,7 +53,7 @@
             display: inline-block;
             font-size: 1.5em;
             font-weight: bold;
-            margin-top: 30px;
+            margin-top: 20px; /* ЗМЕНШЕНО ВІДСТУП, ЩОБ БУЛА ВИДНА КНОПКА */
             cursor: pointer;
             border-radius: 10px;
             box-shadow: 0 0 20px rgba(255, 0, 0, 0.8);
@@ -98,27 +98,11 @@
         }
 
         /* ЗАДАЕМ ПЕРЕРЫВЫ ДЛЯ КАЖДОГО GIF (СМЕНА КАЖДЫЕ 5 СЕК) */
-        /* === ВАШИ 5 GIF-ФАЙЛОВ === */
-        .slide:nth-child(1) {
-            background-image: url('Slingshot1.gif'); 
-            animation-delay: 0s;
-        }
-        .slide:nth-child(2) {
-            background-image: url('Slingshot2.gif'); 
-            animation-delay: 5s; 
-        }
-        .slide:nth-child(3) {
-            background-image: url('Slingshot3.gif'); 
-            animation-delay: 10s; 
-        }
-        .slide:nth-child(4) {
-            background-image: url('Slingshot4.gif'); 
-            animation-delay: 15s; 
-        }
-        .slide:nth-child(5) {
-            background-image: url('Slingshot5.gif'); 
-            animation-delay: 20s; 
-        }
+        .slide:nth-child(1) { background-image: url('Slingshot1.gif'); animation-delay: 0s; }
+        .slide:nth-child(2) { background-image: url('Slingshot2.gif'); animation-delay: 5s; }
+        .slide:nth-child(3) { background-image: url('Slingshot3.gif'); animation-delay: 10s; }
+        .slide:nth-child(4) { background-image: url('Slingshot4.gif'); animation-delay: 15s; }
+        .slide:nth-child(5) { background-image: url('Slingshot5.gif'); animation-delay: 20s; }
 
         /* АНИМАЦИЯ СМЕНЫ ВИДЕО */
         @keyframes slide-fade {
@@ -131,7 +115,7 @@
         
         .disclaimer {
             font-size: 0.8em;
-            color: #777; /* Змінено на темний */
+            color: #777; 
             margin-top: 20px;
         }
         
@@ -141,8 +125,8 @@
             bottom: 20px;
             right: 20px;
             width: 250px;
-            background: #F0F0F0; /* Світліший фон чату */
-            color: #333; /* Текст чату темний */
+            background: #F0F0F0; 
+            color: #333; 
             border-radius: 10px;
             box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
             padding: 15px;
@@ -167,17 +151,17 @@
             margin-right: 10px;
             background-size: cover;
             background-position: center;
-            border: 2px solid #FF0000; /* Червона рамка */
+            border: 2px solid #FF0000; 
         }
         .model-name {
             font-weight: bold;
-            color: #333; /* Ім'я темне */
+            color: #333; 
             margin-bottom: 0px; 
         }
         .typing-indicator {
             display: inline-block;
             margin-left: 5px;
-            color: #008000; /* Зелений для друку */
+            color: #008000; 
         }
         @keyframes typing-blink {
             0%, 100% { opacity: 1; }
@@ -186,8 +170,6 @@
         .typing-indicator span {
             animation: typing-blink 1s infinite;
         }
-        /* Конец СТИЛЕЙ ФЕЙКОВОГО ЧАТА */
-
     </style>
 </head>
 <body>
@@ -197,15 +179,17 @@
     <div style="font-size: 1.1em; color: #008000; margin-bottom: 10px; font-weight: bold;" id="safety-guarantee">
         100% FREE, NO ADS OR VIRUSES GUARANTEED
     </div>
-    <div style="font-size: 0.9em; color: #008000; margin-bottom: 15px;">
+    <div style="font-size: 0.9em; color: #008000; margin-bottom: 5px;">
         <span style="display: inline-block; margin-right: 15px;">✅ SECURE CONNECTION</span>
         <span style="display: inline-block;">🔒 SSL ENCRYPTED</span>
     </div>
-    
     <p style="font-size: 1.2em; color: #FF0000;">21+ Verified Users Access Only.</p>
-
     <div id="timer-container">02:00</div>
 
+    <a href="https://justlovedates.com/tds/ae?tdsId=s8403sid_r&tds_campaign=s8403sid&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=bn&affid=dba65811&subid={subid}&subid2={subid2}&clickid={clickid}" id="main-button" class="blinking-button">
+        YES! START FREE VIDEO & CHAT ACCESS
+    </a>
+    
     <div class="slider-container">
         <div class="slide"></div>
         <div class="slide"></div>
@@ -213,11 +197,6 @@
         <div class="slide"></div>
         <div class="slide"></div>
     </div>
-    
-    <a href="https://justlovedates.com/tds/ae?tdsId=s8403sid_r&tds_campaign=s8403sid&s1=int&utm_source=int&utm_sub=opnfnl&utm_term=bn&affid=dba65811&subid={subid}&subid2={subid2}&clickid={clickid}" id="main-button" class="blinking-button">
-        YES! START FREE VIDEO & CHAT ACCESS
-    </a>
-
     <div class="disclaimer">
         *Access is limited to users 21 years or older. Registration is free.
     </div>
@@ -283,7 +262,7 @@
         },
         // Sweden / Swedish
         'sv': {
-            headline: "🚨 SISTA CHANSEN! VIDEO OCH LIVE-CHATT! 🚨",
+            headline: "🚨 SISTA CHАНСЕН! VIDEO OCH LIVE-CHATT! 🚨",
             button: "JA! GRATIS ÅTKOMST TILL VIDEO OCH CHATT",
             safety: "100% GRATIS, INGEN REKLAM ELLER VIRUS",
             chat_msg_name: "Hej! Jag är Emily. Jag väntar på ditt meddelande för att visa dig min video. Skynda dig, jag har inte mycket tid!"
@@ -304,7 +283,7 @@
     // Обновляем текст, который не переводится JS:
     document.querySelector('p[style*="FFAAAA"]').textContent = "21+ Verified Users Access Only.";
 
-    // === СКРИПТ 3: ИМИТАЦИЯ ЧАТА ===
+    // === СКРИПТ 3: ИМИТАЦИЯ ЧАТА (ФИКС) ===
     const chatPopup = document.getElementById('chat-popup');
     const chatMessage = document.getElementById('chat-message');
     
@@ -313,7 +292,7 @@
 
 
     let messageIndex = 0;
-    const typingSpeed = 70; // Скорость печати в мс
+    const typingSpeed = 70; 
 
     function startTyping() {
         if (messageIndex < finalMessage.length) {
